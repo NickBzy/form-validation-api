@@ -123,6 +123,10 @@ form legend {
   border-radius: 8px;
 }
 
+.form-item input:invalid {
+  border: 2px solid red;
+}
+
 .form-item input:hover {
   border: 2px solid rgb(0, 0, 0);
 }
@@ -140,6 +144,12 @@ form legend {
   font-size: 0.8rem;
   font-weight: bold;
   color: rgb(2, 117, 248);
+}
+
+.filled {
+  top: -10px !important;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 form button {
@@ -160,4 +170,27 @@ form button:hover {
 .validation {
   color: red;
   display: none;
+}
+
+/* SHAKE ON ERRORS */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.3s ease;
 }
