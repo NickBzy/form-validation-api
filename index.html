@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation Practice</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <div class="container">
+      <form action="">
+        <legend>FORM VALIDATION TESTING</legend>
+        <div class="form-item">
+          <input
+            type="email"
+            id="email"
+            minlength="5"
+            title="Please enter a valid email address (e.g., name@example.com)"
+          />
+          <label for="email">Email:</label>
+        </div>
+        <p class="email validation"></p>
+        <div class="form-item">
+          <input
+            type="text"
+            id="country"
+            minlength="2"
+            pattern="^[A-Za-zÀ-ÿ\s\-]+$"
+            title="Please enter a valid country name using letters only"
+          />
+          <label for="country">Country:</label>
+        </div>
+        <p class="country validation"></p>
+        <div class="form-item">
+          <input
+            type="text"
+            id="postal"
+            pattern="[A-Za-z]\d[A-Za-z][ \-]?\d[A-Za-z]\d"
+            title="Enter a valid Canadian postal code (e.g., K1A 0B1)"
+          />
+          <label for="postal">Postal Code:</label>
+        </div>
+        <p class="postal validation"></p>
+        <div class="form-item">
+          <input
+            type="password"
+            id="password"
+            pattern="^(?=.*[a-zA-Z])(?=.*\d).+$"
+            minlength="6"
+            title="Password must be at least 6 characters and include at least one letter and one number"
+          />
+          <label for="password">Password:</label>
+        </div>
+        <p class="password validation"></p>
+        <div class="form-item">
+          <input
+            type="password"
+            id="password-confirm"
+            title="Please enter the same password again for confirmation"
+          />
+          <label for="password-confirm">Password Confirmation:</label>
+        </div>
+        <p class="password-confirm validation"></p>
+        <button class="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
